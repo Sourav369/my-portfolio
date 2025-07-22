@@ -38,7 +38,7 @@ export default function Landing() {
       <video
         ref={videoRef}
         className={`landing-video ${blurred ? "blurred" : ""}`}
-        src="/intro1.mp4"
+        src="/intro3.mp4"
         autoPlay
         muted
         loop
