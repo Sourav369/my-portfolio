@@ -1,0 +1,134 @@
+.projects-section {
+  padding: 80px 20px;
+  background-color: #000;
+  color: #f9fafb;
+  text-align: center;
+  scroll-margin-top: 20px;
+  font-family: var(--font-geist-sans), var(--font-inter), sans-serif;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.projects-section.visible {
+  opacity: 1;
+}
+
+.projects-heading {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 60px;
+  color: white;
+}
+
+.project-group {
+  margin-bottom: 60px;
+}
+
+.project-subheading {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #d1d5db;
+}
+
+.project-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+
+.project-card {
+  background-color: #1f2937;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  text-align: left;
+  transition: transform 0.3s ease;
+
+  /* ✅ Apply Geist font to everything inside */
+  font-family: var(--font-geist-sans), var(--font-inter), sans-serif;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card h4,
+.project-card p,
+.stack {
+  font-family: var(--font-geist-sans), var(--font-inter), sans-serif;
+}
+
+.project-card h4 {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #a78bfa;
+  font-family: var(--font-geist-sans), var(--font-inter), sans-serif;
+}
+.project-card p {
+  font-size: 15px;
+  letter-spacing: 0.2px;
+  color: #e5e7eb;
+}
+
+.stack {
+  font-style: italic;
+  color: #cbd5e1;
+  margin-top: 10px;
+}
+
+.visit-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #a78bfa;
+  font-weight: 500;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.visit-link:hover {
+  color: #d8b4fe;
+}
+@media (max-width: 768px) {
+  .project-cards {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 20px !important;
+  }
+
+  .project-card {
+    width: 90% !important;
+    padding: 16px !important;
+    font-size: 14px !important;
+    box-sizing: border-box;
+  }
+
+  .projects-heading {
+    font-size: 28px !important;
+    margin-bottom: 40px !important;
+  }
+
+  .project-subheading {
+    font-size: 20px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .project-card h4 {
+    font-size: 18px !important;
+  }
+
+  .project-card p {
+    font-size: 14px !important;
+  }
+
+  .visit-link {
+    font-size: 14px !important;
+  }
+
+  .project-card:hover {
+    transform: none !important;
+  }
+}

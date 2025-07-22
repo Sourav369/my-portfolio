@@ -1,0 +1,136 @@
+.expertise-section {
+  padding: 0px 40px 80px 40px; /* reduced top padding only */
+  background-color: #000; /* match dark theme */
+  color: #f5f0e6;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  scroll-margin-top: 150px;
+}
+.expertise-section.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.expertise-heading {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  font-weight: bold;
+}
+.expertise-section {
+  padding: 0px 40px 80px 40px;
+  background-color: #000;
+  color: #f5f0e6;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  scroll-margin-top: 150px;
+
+  /* ✅ Apply same font as Projects section */
+  font-family: var(--font-geist-sans), var(--font-inter), sans-serif;
+}
+
+.expertise-card h3,
+.expertise-card p {
+  font-family: var(--font-geist-sans), var(--font-inter), sans-serif; /* match across */
+}
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+
+.expertise-card {
+  background-color: #4d4c4c;
+  border-radius: 12px;
+  padding: 30px 25px;
+  width: 300px;
+  box-shadow: 0 6px 30px rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.expertise-card:hover {
+  transform: translateY(-5px);
+}
+
+.expertise-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #f5f0e6;
+}
+
+.expertise-card p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.tech-tags span {
+  background-color: #f5f0e6;
+  color: #111;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  font-family: monospace;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tech-tags span:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+}
+@media (max-width: 768px) {
+  .expertise-heading {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .expertise-card {
+    width: 90%;
+    padding: 20px 18px;
+  }
+
+  .expertise-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+  }
+
+  .expertise-card p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .tech-tags {
+    gap: 8px;
+    row-gap: 10px;
+  }
+
+  .tech-tags span {
+    font-size: 0.8rem;
+    padding: 5px 12px;
+  }
+
+  .expertise-section {
+    padding-bottom: 50px;
+  }
+}

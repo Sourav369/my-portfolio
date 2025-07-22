@@ -1,0 +1,150 @@
+.career-heading {
+  font-family: var(--font-geist-sans), var(--font-inter), sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: center;
+  padding-left: 60px;
+  color: #ffffff;
+}
+
+.career-timeline {
+  background-color: #000000;
+  padding: 80px 20px;
+  color: #f9fafb;
+  text-align: center;
+}
+
+.timeline-wrapper {
+  position: relative;
+  margin: 40px auto;
+  max-width: 900px;
+  padding: 0 20px;
+}
+
+.timeline-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 100%;
+  background-color: #d1d5db;
+}
+
+.timeline-item {
+  position: relative;
+  width: 100%;
+  margin: 80px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.timeline-item.left {
+  flex-direction: row-reverse;
+}
+
+.timeline-item.right {
+  flex-direction: row;
+}
+
+.timeline-dot {
+  width: 16px;
+  height: 16px;
+  background-color: #a855f7;
+  box-shadow: 0 0 10px #a855f7aa;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 12px;
+  z-index: 2;
+}
+
+.timeline-content {
+  font-family: var(--font-geist-sans), var(--font-inter), sans-serif;
+  background-color: #1f2937;
+  color: #f9fafb;
+  padding: 28px 32px;
+  border-radius: 16px;
+  max-width: 420px;
+  width: 90%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-6px);
+}
+
+.timeline-content h3 {
+  font-size: 18px;
+  font-weight: 600; /* changed from 700 to match Project Cards */
+  margin: 0 0 8px;
+  color: #facc15;
+}
+
+.timeline-content h4 {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 4px 0 10px;
+  color: #e5e7eb;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-content .duration {
+  font-size: 14px;
+  font-style: italic;
+  color: #9ca3af;
+  margin-bottom: 14px;
+}
+
+.timeline-content p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .career-heading {
+    font-size: 28px;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .timeline-wrapper {
+    padding-left: 20px;
+  }
+
+  .timeline-wrapper::before {
+    left: 8px; /* Move vertical line to left */
+  }
+
+  .timeline-item {
+    flex-direction: row; /* Ensure horizontal layout: dot on left, card on right */
+    align-items: flex-start;
+    margin: 40px 0;
+  }
+
+  .timeline-item.left,
+  .timeline-item.right {
+    flex-direction: row; /* Override alternating styles */
+  }
+
+  .timeline-dot {
+    position: relative;
+    left: 0;
+    top: 20px;
+    margin-right: 16px;
+    transform: none;
+  }
+
+  .timeline-content {
+    text-align: left;
+    margin: 0;
+    max-width: calc(100% - 40px);
+    padding: 20px;
+  }
+}

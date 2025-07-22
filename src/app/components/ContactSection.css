@@ -1,0 +1,160 @@
+/* src/app/components/ContactSection.css */
+
+.contact-section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("/Melbourne copy.jpeg");
+  background-color: black;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  overflow: hidden;
+}
+
+.contact-section.visible {
+  opacity: 1;
+}
+
+.contact-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.contact-section.visible::before {
+  opacity: 1;
+}
+
+.contact-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.contact-heading {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.contact-subtext {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.contact-button {
+  font-size: 1.1rem;
+  background-color: #ffe066;
+  color: black;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: #ffcd39;
+}
+
+/* ✅ Social Icons */
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-size: 2.2rem;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.contact-icons a {
+  color: #f5f0e6;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.contact-icons a:hover {
+  transform: scale(1.2);
+  color: #ffe066;
+}
+
+/* ✅ Footer Text */
+.contact-footer-text {
+  font-size: 1rem;
+  color: #f5f0e6;
+  font-family: "Inter", sans-serif;
+  opacity: 0.9;
+}
+/* ✅ Footer wrapper positioned at the bottom center */
+.contact-footer {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 2;
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-icons a {
+  color: #f5f0e6;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.contact-icons a:hover {
+  transform: scale(1.2);
+  color: #ffe066;
+}
+
+.contact-footer-text {
+  font-size: 1rem;
+  color: #f5f0e6;
+  font-family: "Inter", sans-serif;
+  opacity: 0.9;
+}
+/* 🔽 Mobile-specific adjustments (iPhone, small tablets) */
+@media (max-width: 768px) {
+  .contact-heading {
+    font-size: 2rem; /* was 3rem */
+  }
+
+  .contact-subtext {
+    font-size: 1rem; /* was 1.2rem */
+    line-height: 1.4;
+  }
+
+  .contact-button {
+    font-size: 1rem; /* slightly smaller for mobile */
+    padding: 0.6rem 1.5rem;
+  }
+
+  .contact-icons {
+    font-size: 1.6rem; /* icons smaller */
+    gap: 20px;
+  }
+
+  .contact-footer-text {
+    font-size: 0.85rem;
+  }
+}
