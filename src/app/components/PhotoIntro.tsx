@@ -36,7 +36,7 @@ export default function PhotoIntro() {
         <img src="grad-photo.jpeg" alt="Sourav Madan" />
       </div>
       <div className="intro-text">
-        <h2>Hello, I'm Sourav</h2>
+        <h2>Hello, I&apos;m Sourav</h2>
         <p>
           Full Stack Developer based in Melbourne with 2.5 years at Bosch and
           currently pursuing my Master’s at RMIT. I specialize in React, .NET,
