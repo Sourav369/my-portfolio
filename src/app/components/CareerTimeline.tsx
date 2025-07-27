@@ -6,21 +6,23 @@ import "./CareerTimeline.css";
 
 const experiences = [
   {
-    title: "PHP Intern",
+    title: "Web Developer Intern",
     company: "InfiData Technologies, Bengaluru",
     duration: "Jan 2021 – Jun 2021",
-    description: "PHP Dashboard, Documentation, PHP Bootstrap",
+    description:
+      "Built internal tools using HTML, CSS, JavaScript, and ASP.NET. Contributed to backend logic in C# and SQL Server, resolved UI bugs, and worked in an Agile setup to support sprint-based delivery and documentation.",
   },
   {
     title: "Associate Software Engineer",
     company: "Bosch Global Software, Bengaluru",
     duration: "Aug 2021 – Jan 2024",
-    description: ".NET, React, Azure DevOps, Agile Scrum",
+    description:
+      "Developed full-stack internal applications using .NET Core, React.js, and Azure App Services. Built real-time QA dashboards and release tools, implemented CI/CD pipelines, and collaborated in Agile sprints to deliver cloud-native enterprise features.",
   },
   {
     title: "Postgraduate Student",
     company: "RMIT University, Melbourne",
-    duration: "Feb 2024 – Present",
+    duration: "Feb 2024 – Nov 2025",
     description: "Master's in IT ",
   },
 ];
